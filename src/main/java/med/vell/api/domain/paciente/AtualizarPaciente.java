@@ -6,8 +6,8 @@ import med.vell.api.domain.endereco.DadosEndereco;
 public record AtualizarPaciente(
         @NotNull
         Long id,
-        String name,
-        String phone,
+        String nome,
+        String telefone,
         DadosEndereco endereco
 ) {
 }
