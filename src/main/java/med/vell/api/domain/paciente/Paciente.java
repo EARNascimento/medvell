@@ -47,7 +47,7 @@ public class Paciente {
         }
 
         if(dados.endereco() != null){
-            this.endereco = dados.endereco();
+            this.endereco.atualizarInformacoes(dados.endereco());
         }
     }
 
