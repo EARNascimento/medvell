@@ -6,7 +6,7 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import med.vell.api.domain.endereco.DadosEndereco;
 
-public record RegistrarPaciente(
+public record CadastrarPaciente(
         @NotBlank
         String nome,
         @NotBlank

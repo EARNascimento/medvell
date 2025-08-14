@@ -28,7 +28,7 @@ public class Paciente {
     @Embedded
     private Endereco endereco;
 
-    public Paciente(RegistrarPaciente dados){
+    public Paciente(CadastrarPaciente dados){
         this.nome = dados.nome();
         this.email = dados.email();
         this.telefone = dados.telefone();
