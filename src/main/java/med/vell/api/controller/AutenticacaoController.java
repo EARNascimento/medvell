@@ -3,6 +3,7 @@ package med.vell.api.controller;
 import jakarta.validation.Valid;
 import med.vell.api.domain.usuario.DadosAutenticacao;
 import med.vell.api.domain.usuario.Usuario;
+import med.vell.api.infra.security.DadosTokenJWT;
 import med.vell.api.infra.security.TokenService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -28,6 +29,7 @@ public class AutenticacaoController {
         var token = new UsernamePasswordAuthenticationToken(dados.login(), dados.senha());
         var authentication = manager.authenticate(token);
 
-        return ResponseEntity.ok(tokenService.gerarToken((Usuario) authentication.getPrincipal()));
+        var tokenJWT = tokenService.gerarToken((Usuario) authentication.getPrincipal());
+        return ResponseEntity.ok(new DadosTokenJWT(tokenJWT));
     }
 }
