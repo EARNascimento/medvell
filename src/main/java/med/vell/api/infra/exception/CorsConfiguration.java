@@ -1,4 +1,4 @@
-package med.vell.api.infra;
+package med.vell.api.infra.exception;
 
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
